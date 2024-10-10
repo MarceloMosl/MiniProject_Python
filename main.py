@@ -1,12 +1,19 @@
+from addTask import addTask
+
+  
+def switch(value, taskList):
+    switcher = {
+        "1": lambda: addTask(input("Enter the task: "),taskList),
+        "2": lambda: print("Option 2"),
+        "3": lambda: print("Option 3"),
+    }
+    switcher.get(value, lambda: print("Invalid option"))()
+
 def main():
   programShouldRun = True;
-      
-    # To-Do List Application
-    # 1. Add Task
-    # 2. Remove Task
-    # 3. View Tasks
-    # 4. Exit
   
+  taskList = [];
+      
   while(programShouldRun):
         print("\n\nTo-Do List Application")
         print("1. Add Task")
@@ -18,6 +25,9 @@ def main():
         
         if(userInput == "4"):
           programShouldRun = False
+          break
+          
+        switch(userInput, taskList=taskList)
         
   
 main()
