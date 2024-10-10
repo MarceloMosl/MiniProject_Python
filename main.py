@@ -27,8 +27,10 @@ def main():
 
         userInput = input("Enter your choice: ")
 
+        # check if the user wants to exit
         if userInput == "4":
             programShouldRun = False
+            print("Exiting the application. Goodbye!")
             break
 
         switch(userInput, taskList=taskList)
