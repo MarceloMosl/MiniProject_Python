@@ -1,5 +1,5 @@
-from SimpleTodoListApp.addTask import addTask
-from SimpleTodoListApp.viewTasks import viewTasks
+from addTask import addTask
+from viewTasks import viewTasks
 
 
 def switch(value, taskList: list):
