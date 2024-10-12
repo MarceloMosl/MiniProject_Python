@@ -1,20 +1,7 @@
 from addTask import addTask
 from viewTasks import viewTasks
+from removeTask import removeTask
 
-def removeTask(taskList: list):
-    if not taskList:
-        print("The task list is empty, nothing to remove.")
-    else:
-        viewTasks(taskList)
-        try:
-            taskNumber = int(input("\nEnter the task number to remove: "))
-            if 1 <= taskNumber <= len(taskList):
-                removedTask = taskList.pop(taskNumber - 1)
-                print(f"Task '{removedTask}' removed from the list.")
-            else:
-                print("Invalid task number.")
-        except ValueError:
-            print("Please enter a valid number.")
 
 def switch(value, taskList: list):
     switcher = {

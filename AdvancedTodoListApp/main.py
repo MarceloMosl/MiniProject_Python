@@ -1,8 +1,12 @@
+from addTask import addTask
+from viewTasks import viewTasks
+from removeTask import removeTask
+
 def switch(value, taskList: list):
     switcher = {
-        "1": lambda: print("Option 1"),  # add a task
-        "2": lambda: print("Option 2"),  # remove a task
-        "3": lambda: print("Option 3"),  # view tasks
+        "1": lambda: addTask(input("Enter the task: "), taskList),
+        "2": lambda: removeTask(taskList),
+        "3": lambda: viewTasks(taskList),
         "4": lambda: print("Option 4"),  # suggest tasks based on priority and deadlines
     }
     switcher.get(
