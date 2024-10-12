@@ -2,12 +2,15 @@ from addTask import addTask
 from viewTasks import viewTasks
 from removeTask import removeTask
 
-def switch(value, taskList: list):
-    switcher = {
-        "1": lambda: addTask(input("Enter the task: "), taskList),
-        "2": lambda: removeTask(taskList),
-        "3": lambda: viewTasks(taskList),
-    }
-    switcher.get(
-        value, lambda: print("Invalid option, please choose one the VALID options :D")
-    )()
+def switch(userInput, taskList):
+    if userInput == "1":
+        addTask(taskList)
+    elif userInput == "2":
+        removeTask(taskList)
+    elif userInput == "3":
+        viewTasks(taskList)
+    elif userInput == "4":
+        # Aqui você pode adicionar a lógica para sugerir tarefas
+        print("Suggest tasks functionality goes here.")
+    else:
+        print("Invalid choice, please try again.")

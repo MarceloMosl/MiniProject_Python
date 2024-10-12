@@ -1,6 +1,12 @@
-def addTask(newTask: str, taskList: list):
-    if newTask not in taskList:
-        taskList.append(newTask)
-        print(f"'{newTask}' has been added to the list")
-    else:
-        print(f"'{newTask}' has already been added to the list, try a different one")
+def addTask(taskList):
+    task = input("Enter the task: ")
+    priority = input("Enter the priority (high, medium, low): ").lower()
+    deadline = input("Enter the deadline (YYYY-MM-DD): ")
+
+    taskList.append({
+        "description": task,
+        "priority": priority,
+        "deadline": deadline
+    })
+    print(f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list.")
+
