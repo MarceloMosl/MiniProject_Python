@@ -1,3 +1,5 @@
+from viewTasks import viewTasks
+
 def removeTask(taskList: list):
     if not taskList:
         print("The task list is empty, nothing to remove.")
@@ -9,6 +11,6 @@ def removeTask(taskList: list):
                 removedTask = taskList.pop(taskNumber - 1)
                 print(f"Task '{removedTask}' removed from the list.")
             else:
-                print("Invalid task number.")
+                print("Invalid task number. Please choose a valid number from the list.")
         except ValueError:
             print("Please enter a valid number.")
