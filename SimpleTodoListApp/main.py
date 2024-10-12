@@ -1,23 +1,12 @@
 from addTask import addTask
 from viewTasks import viewTasks
 from removeTask import removeTask
-
-
-def switch(value, taskList: list):
-    switcher = {
-        "1": lambda: addTask(input("Enter the task: "), taskList),
-        "2": lambda: removeTask(taskList),
-        "3": lambda: viewTasks(taskList),
-    }
-    switcher.get(
-        value, lambda: print("Invalid option, please choose one the VALID options :D")
-    )()
+from switcher import switch
 
 
 def main():
     programShouldRun = True
     taskList = []
-
 
     while programShouldRun:
         print("\n\nTo-Do List Application")
@@ -28,15 +17,13 @@ def main():
 
         userInput = input("Enter your choice: ")
 
-  
-
-        # check if the user wants to exit
+        # Check if the user wants to exit
         if userInput == "4":
             programShouldRun = False
             print("Exiting the application. Goodbye!")
             break
 
-        switch(userInput, taskList=taskList)
-
+        switch(userInput, taskList)  # Chama a função switch do switcher.py
 
 main()
+

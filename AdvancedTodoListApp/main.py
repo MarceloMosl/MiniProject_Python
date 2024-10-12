@@ -1,18 +1,7 @@
 from addTask import addTask
 from viewTasks import viewTasks
 from removeTask import removeTask
-
-def switch(value, taskList: list):
-    switcher = {
-        "1": lambda: addTask(input("Enter the task: "), taskList),
-        "2": lambda: removeTask(taskList),
-        "3": lambda: viewTasks(taskList),
-        "4": lambda: print("Option 4"),  # suggest tasks based on priority and deadlines
-    }
-    switcher.get(
-        value, lambda: print("Invalid option, please choose a valid option.")
-    )()
-
+from switcher import switch
 
 def main():
     programShouldRun = True
