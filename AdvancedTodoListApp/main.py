@@ -1,6 +1,7 @@
 from addTask import addTask
 from viewTasks import viewTasks
 from removeTask import removeTask
+from suggestTask import suggestTask
 from switcher import switch
 
 def main():

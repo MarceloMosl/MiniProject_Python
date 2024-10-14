@@ -1,6 +1,12 @@
 def addTask(taskList):
     task = input("Enter the task: ")
-    priority = input("Enter the priority (high, medium, low): ").lower()
+    priority_mapping = {
+        "1": "high",
+        "2": "medium",
+        "3": "low"
+    }
+    priority = input("Enter the priority (1. high, 2. medium, 3. low): ").lower()
+    priority = priority_mapping.get(priority, "low")
     deadline = input("Enter the deadline (YYYY-MM-DD): ")
 
     taskList.append({

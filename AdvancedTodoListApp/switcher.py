@@ -1,4 +1,5 @@
 from addTask import addTask
+from suggestTask import suggestTask
 from viewTasks import viewTasks
 from removeTask import removeTask
 
@@ -10,7 +11,8 @@ def switch(userInput, taskList):
     elif userInput == "3":
         viewTasks(taskList)
     elif userInput == "4":
-        # Aqui você pode adicionar a lógica para sugerir tarefas
-        print("Suggest tasks functionality goes here.")
+        suggestTask(taskList)
+
+
     else:
         print("Invalid choice, please try again.")
