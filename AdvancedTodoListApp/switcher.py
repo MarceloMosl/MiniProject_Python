@@ -10,7 +10,7 @@ def switch(value, taskList: list):
         "2": lambda: removeTask(taskList),  # remove a task
         "3": lambda: viewTasks(taskList),  # view tasks
         "4": lambda: suggestTask(
-            suggestTask
+            taskList
         ),  # suggest tasks based on priority and deadlines
     }
     switcher.get(
