@@ -8,4 +8,4 @@ def viewTasks(tasksList: list):
         description = task["description"]
         priority = task["priority"]
         deadline = task["deadline"]
-        print(f"{i}. {description.capitalize()} - Priority: {priority.capitalize()}, Deadline: {deadline}")
+        print(f"{i}. {description.capitalize()} - {priority.capitalize()} - {deadline}")
