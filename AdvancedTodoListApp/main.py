@@ -1,6 +1,5 @@
 from switcher import switch
 
-
 def main():
     programShouldRun = True
     taskList = []
