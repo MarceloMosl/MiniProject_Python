@@ -10,7 +10,7 @@ def removeTask(taskList: list):
             taskNumber = int(input("\nEnter the task number to remove: "))
             if 1 <= taskNumber <= len(taskList):
                 removedTask = taskList.pop(taskNumber - 1)
-                print(f"Task '{removedTask}' removed from the list.")
+                print(f"Task '{removedTask['description']}' removed from the list.")
             else:
                 print(
                     "Invalid task number. Please choose a valid number from the list."

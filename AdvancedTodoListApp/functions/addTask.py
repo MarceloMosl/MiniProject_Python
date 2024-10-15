@@ -23,13 +23,13 @@ def get_valid_date(prompt):
 def addTask(taskList: list):
     task = input("Enter the task: ")
 
-    priority_mapping = {"1": "high", "2": "medium", "3": "low"}
-    priority = input("Enter the priority (1. high, 2. medium, 3. low): ")
+    priority = input("Enter the priority (high, medium or low): ").lower()
+    priority_mapping = {"high", "medium", "low"}
 
     # Check if the user input is a valid option for the task priority
     while priority not in priority_mapping:
         print("Invalid option, please choose a valid option.")
-        priority = input("Enter the priority (1. high, 2. medium, 3. low): ")
+        priority = input("Enter the priority (high, medium or low): ").lower()
 
     deadline = get_valid_date("Enter the deadline (YYYY-MM-DD): ")
 
@@ -43,5 +43,5 @@ def addTask(taskList: list):
 
     taskList.append({"description": task, "priority": priority, "deadline": deadline})
     print(
-        f"'{task}' with priority '{priority}' and deadline '{deadline}' has been added to the list."
+        f"'{task}' with priority '{priority.capitalize()}' and deadline '{deadline}' has been added to the list."
     )
