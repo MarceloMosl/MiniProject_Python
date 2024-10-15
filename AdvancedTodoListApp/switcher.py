@@ -1,18 +1,18 @@
-from addTask import addTask
-from suggestTask import suggestTask
-from viewTasks import viewTasks
-from removeTask import removeTask
-
-def switch(userInput, taskList):
-    if userInput == "1":
-        addTask(taskList)
-    elif userInput == "2":
-        removeTask(taskList)
-    elif userInput == "3":
-        viewTasks(taskList)
-    elif userInput == "4":
-        suggestTask(taskList)
+from functions.addTask import addTask
+from functions.viewTasks import viewTasks
+from functions.removeTask import removeTask
+from functions.suggestTask import suggestTask
 
 
-    else:
-        print("Invalid choice, please try again.")
+def switch(value, taskList: list):
+    switcher = {
+        "1": lambda: addTask(taskList),  # add a task
+        "2": lambda: removeTask(taskList),  # remove a task
+        "3": lambda: viewTasks(taskList),  # view tasks
+        "4": lambda: suggestTask(
+            suggestTask
+        ),  # suggest tasks based on priority and deadlines
+    }
+    switcher.get(
+        value, lambda: print("Invalid option, please choose a valid option.")
+    )()
