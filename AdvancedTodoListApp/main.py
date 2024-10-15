@@ -1,9 +1,10 @@
-from switcher import switch
+from advanceSwitcher import switch
 
 
 def main():
     programShouldRun = True
     taskList = []
+    completedTasks = []
 
     while programShouldRun:
         # display the menu options
@@ -12,19 +13,20 @@ def main():
         print("2. Remove Task")
         print("3. View Tasks")
         print("4. Suggest Tasks")
-        print("5. Exit")
+        print("5. Complete Tasks")
+        print("6. Exit")
 
         # get user input
         userInput = input("Enter your choice: ")
 
         # check if the user wants to exit
-        if userInput == "5":
+        if userInput == "6":
             programShouldRun = False
             print("Exiting the application. Goodbye!")
             break
 
         # call the switch function to handle the menu option
-        switch(userInput, taskList=taskList)
+        switch(userInput, taskList=taskList, completedTasks=completedTasks)
 
 
 # run the application
