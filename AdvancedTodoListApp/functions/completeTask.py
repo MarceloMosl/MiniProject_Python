@@ -1,4 +1,9 @@
 def completeTasks(tasksList: list, completedTasks: list):
+
+    if len(tasksList) == 0:
+        print("It looks like you dont have any task to complete at the moment.")
+        return
+
     print("What task would you like to mark as done?")
 
     search = input("Search by name: ")

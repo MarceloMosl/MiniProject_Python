@@ -14,13 +14,14 @@ def main():
         print("3. View Tasks")
         print("4. Suggest Tasks")
         print("5. Complete Tasks")
-        print("6. Exit")
+        print("6. Completes Chart")
+        print("7. Exit")
 
         # get user input
         userInput = input("Enter your choice: ")
 
         # check if the user wants to exit
-        if userInput == "6":
+        if userInput == "7":
             programShouldRun = False
             print("Exiting the application. Goodbye!")
             break
