@@ -9,6 +9,7 @@ def suggestTask(taskList):
     sort_tasks = sorted(taskList,
         key=lambda x: (priority_order[x["priority"]], datetime.strptime(x["deadline"], "%Y-%m-%d")))
 
+
     for task in sort_tasks:
         print(f"{task['description']} - {task['priority'].capitalize()} priority, Deadline: {task['deadline']}")
 
