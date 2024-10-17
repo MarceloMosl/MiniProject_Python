@@ -23,14 +23,19 @@ def completeTasks(tasksList: list, completedTasks: list):
         return
 
     while True:
-        taskToComplete = input(
-            "\nPress Q to search one more time.\nPlease select the number of the task you would like to complete: "
+        taskToComplete = input("\nPress Q to search one more time.\nPress M to go back to the main menu."
+                               "\nPlease select the number of the task you would like to complete: "
         )
 
         # Allow the user to search again
         if taskToComplete.lower() == "q":
             completeTasks(tasksList, completedTasks)
             break
+
+        # Allow the user to go back to the main menu
+        elif taskToComplete.lower() == "m":
+            print("Returning to the main menu.")
+            return
 
         # Validate that the input is a number and in the valid range
         if taskToComplete.isdigit():
