@@ -8,7 +8,7 @@ def get_valid_date(prompt):
             parsed_date = datetime.strptime(date_input, "%Y-%m-%d")
 
             # Check if the date is today or later
-            if parsed_date >= datetime.today():
+            if parsed_date.date() >= datetime.today().date():
                 return date_input
             else:
                 print(
