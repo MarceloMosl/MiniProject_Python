@@ -11,9 +11,7 @@ def switch(value, taskList: list, completedTasks: list):
         "1": lambda: addTask(taskList),  # add a task
         "2": lambda: removeTask(taskList),  # remove a task
         "3": lambda: viewTasks(taskList),  # view tasks
-        "4": lambda: suggestTask(
-            taskList
-        ),  # suggest tasks based on priority and deadlines
+        "4": lambda: suggestTask(taskList),  # suggest tasks based on priority and deadlines
         "5": lambda: completeTasks(tasksList=taskList, completedTasks=completedTasks),
         "6": lambda: completesChart(tasks=completedTasks),
     }
