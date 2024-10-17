@@ -13,9 +13,13 @@ def completesChart(tasks: list):
 
     date_counts = Counter(task_dates)
 
+    # date_counts = {"2024-10-17": 3, "2024-10-18": 1, "2024-10-11": 4}
+
     dates = list(date_counts.keys())
 
-    high_priority_counts = [0] * len(dates)
+    # dates = ["2024-10-17", "2024-10-18",  "2024-10-11"]
+
+    high_priority_counts = [0] * len(dates)  # [0, 0, 0]        # len(dates) = 3
     medium_priority_counts = [0] * len(dates)
     low_priority_counts = [0] * len(dates)
 
