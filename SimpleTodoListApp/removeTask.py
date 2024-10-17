@@ -1,3 +1,6 @@
+from functions.viewTasks import viewTasks
+
+
 def removeTask(taskList: list):
     if not taskList:
         print("The task list is empty, nothing to remove.")
